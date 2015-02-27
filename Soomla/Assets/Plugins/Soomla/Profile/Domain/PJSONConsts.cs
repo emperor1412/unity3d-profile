@@ -36,6 +36,7 @@ namespace Soomla.Profile {
 		public const string UP_LANGUAGE         = "language";
 		public const string UP_BIRTHDAY         = "birthday";
 		public const string UP_ACCESSTOKEN      = "accessToken";
+		public const string UP_SECRETKEY      	= "secretKey";
 
 
 		/** Reward **/

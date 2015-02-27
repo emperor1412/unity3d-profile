@@ -42,6 +42,7 @@ namespace Soomla.Profile {
 		public string Language;
 		public string Birthday;
 		public string AccessToken;
+		public string SecretKey;
 		
 		/// <summary>
 		/// Constructor.
@@ -111,6 +112,11 @@ namespace Soomla.Profile {
 			} else {
 				this.AccessToken = "";
 			}
+			if (jsonUP[PJSONConsts.UP_SECRETKEY]) {
+				this.SecretKey = jsonUP[PJSONConsts.UP_SECRETKEY].str;
+			} else {
+				this.SecretKey = "";
+			}
 		}
 		
 		/// <summary>
@@ -132,7 +138,7 @@ namespace Soomla.Profile {
 			obj.AddField(PJSONConsts.UP_LANGUAGE, this.Language);
 			obj.AddField(PJSONConsts.UP_BIRTHDAY, this.Birthday);
 			obj.AddField(PJSONConsts.UP_ACCESSTOKEN, this.AccessToken);
-			
+			obj.AddField(PJSONConsts.UP_SECRETKEY, this.SecretKey);
 			return obj;
 		}
 
