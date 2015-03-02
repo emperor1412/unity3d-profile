@@ -16,7 +16,7 @@
   ],
   "headerpaths": [
     "Facebook/Editor/iOS",
-    "Plugins/Facebook/Scripts"
+    "Facebook/Scripts"
   ],
   "files": [
     "Facebook/Editor/iOS/FbUnityInterface.mm",
