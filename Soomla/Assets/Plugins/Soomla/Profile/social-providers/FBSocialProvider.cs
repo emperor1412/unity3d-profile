@@ -85,7 +85,7 @@ namespace Soomla.Profile
 							SoomlaUtils.LogDebug(TAG, "ProfileCallback[result.Texture]: "+result2.Texture);
 							string fbUserJson = result2.Text;
 							UserProfile userProfile = UserProfileFromFBJsonString(fbUserJson);
-							
+							userProfile.AccessToken = FB.AccessToken;
 							SoomlaProfile.StoreUserProfile (userProfile, true);
 							
 							success(userProfile);
