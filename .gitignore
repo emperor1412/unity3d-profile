@@ -70,3 +70,6 @@ proguard/
 **/.idea/dictionaries
 **/.idea/libraries
 **/.idea/artifacts
+
+BuildTestUnity/
+SoomlaTest/

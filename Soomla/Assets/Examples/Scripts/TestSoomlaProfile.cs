@@ -21,7 +21,7 @@ public class TestSoomlaProfile : MonoBehaviour {
 	}
 
 	public void OnLoginStarted(Provider provider, string payload) {
-
+		Debug.Log("OnLoginStarted");
 	}
 
 	public void OnLoginFinished(UserProfile profile, string payload) {
@@ -66,5 +66,13 @@ public class TestSoomlaProfile : MonoBehaviour {
 		if(GUILayout.Button("Logout Twitter", GUILayout.MinWidth(200), GUILayout.MinHeight(100))) {
 			SoomlaProfile.Logout(Provider.TWITTER);
         }
+
+		if(GUILayout.Button("Login Facebook", GUILayout.MinWidth(200), GUILayout.MinHeight(100))) {
+			SoomlaProfile.Login(Provider.FACEBOOK, "", null);
+		}
+		
+		if(GUILayout.Button("Logout Facebook", GUILayout.MinWidth(200), GUILayout.MinHeight(100))) {
+			SoomlaProfile.Logout(Provider.FACEBOOK);
+		}
     }
 }
