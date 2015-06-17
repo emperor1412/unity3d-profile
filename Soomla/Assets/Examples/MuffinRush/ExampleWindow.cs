@@ -34,7 +34,7 @@ public class ExampleWindow : MonoBehaviour {
 	private static bool isVisible = false;
 	private bool isInit = false;
 
-	private Provider targetProvider = Provider.FACEBOOK;
+	private Provider targetProvider = Provider.GOOGLE;
 	private Reward exampleReward = new BadgeReward("example_reward", "Example Social Reward");
 
 
@@ -118,7 +118,7 @@ public class ExampleWindow : MonoBehaviour {
 		ProfileEvents.OnSoomlaProfileInitialized += () => {
 			Soomla.SoomlaUtils.LogDebug("ExampleWindow", "SoomlaProfile Initialized !");
 			isInit = true;
-		};
+        };
 
 		ProfileEvents.OnUserRatingEvent += () => {
 			Soomla.SoomlaUtils.LogDebug("ExampleWindow", "User opened rating page");
@@ -136,11 +136,11 @@ public class ExampleWindow : MonoBehaviour {
 			}
 
 			if (contactsData.HasMore) {
-				SoomlaProfile.GetContacts(targetProvider, contactsData.PageNumber + 1);
+				SoomlaProfile.GetContacts(targetProvider);
 			}
 		};
 
-		SoomlaProfile.Initialize();
+        SoomlaProfile.Initialize();
 //		SoomlaProfile.OpenAppRatingPage();
 
 		#if UNITY_IPHONE

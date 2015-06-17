@@ -1,3 +1,40 @@
+### v2.1.2 [view commit logs](https://github.com/soomla/unity3d-profile/compare/v2.1.1...v2.1.2)
+
+* Fixes
+  * fixed pagination in GetContacts
+  * multiShare crash on iPad with iOS8
+* Changes
+  * improve working with the permissions in FB
+
+### v2.1.1 [view commit logs](https://github.com/soomla/unity3d-profile/compare/v2.1.0...v2.1.1)
+
+* Fixes
+  * Fix `publish_actions` permission
+
+* Changes
+  * Upgraded to latest version of FB SDK
+
+### v2.1.0 [view commit logs](https://github.com/soomla/unity3d-profile/compare/v2.0.8...v2.1.0)
+
+* New Features
+  * Implemented Pagination for GetContacts and GetFeed
+  * Implemented multi-sharing (sharing with the native functionality of your target platform)
+  * Implemented methods to show confirmation dialog before some actions (not supported for FB)
+  * Supporting permissions param in FB
+
+* Fixes
+ * Fixed an issue on Google+ & Android where cancellation of login didn't work properly
+
+### v2.0.8 [view commit logs](https://github.com/soomla/unity3d-profile/compare/v2.0.7...v2.0.8)
+
+* Changes
+  * Making Store module Unity 5 compatible
+
+### v2.0.7 [view commit logs](https://github.com/soomla/unity3d-profile/compare/v2.0.6...v2.0.7)
+
+* Changes
+  * Added core post build script
+
 ### v2.0.6 [view commit logs](https://github.com/soomla/unity3d-profile/compare/v2.0.5...v2.0.6)
 
 * Changes

@@ -16,8 +16,7 @@ print ("build_path:{0}".format(build_path))
 print ("metadata:{0}".format(meta_data))
 
 frameworks = [
-              'System/Library/Frameworks/Security.framework',
-              'usr/lib/libsqlite3.0.dylib'
+              'System/Library/Frameworks/Security.framework'
               ]
 
 google_frameworks = [
@@ -70,7 +69,7 @@ if using_google_sdk:
     for framework in google_frameworks:
         pbx_object.add_file_if_doesnt_exist(framework, tree='SDKROOT')
     # hopefully build_tools/../../../[Soomla]/Assets/Plugins/iOS
-    google_framework_dir = path.join(script_dir,'..','..','..','WebPlayerTemplates','SoomlaSdkResources','ios', 'ios-profile-google')
+    google_framework_dir = path.join(script_dir,'..','..','..','WebPlayerTemplates','SoomlaConfig','ios', 'ios-profile-google', 'sdk')
     target_google_framework_dir = path.join(build_path, 'Libraries', 'ios-profile-google')
     copytree(google_framework_dir, target_google_framework_dir)
     pbx_object.add_framework_search_paths([path.abspath(target_google_framework_dir)])
