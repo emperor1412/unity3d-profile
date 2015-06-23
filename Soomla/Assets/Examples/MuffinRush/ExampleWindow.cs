@@ -144,7 +144,7 @@ public class ExampleWindow : MonoBehaviour {
 //		SoomlaProfile.OpenAppRatingPage();
 
 		#if UNITY_IPHONE
-		Handheld.SetActivityIndicatorStyle(iOSActivityIndicatorStyle.Gray);
+		Handheld.SetActivityIndicatorStyle(UnityEngine.iOS.ActivityIndicatorStyle.Gray);
 		#elif UNITY_ANDROID
 		Handheld.SetActivityIndicatorStyle(AndroidActivityIndicatorStyle.Small);
 		#endif
